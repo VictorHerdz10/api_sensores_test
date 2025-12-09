@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 // Ruta POST para recibir datos del sensor
 app.post('/api/sensores', (req, res) => {
-    console.log('📡 Datos recibidos:', req.body);
+    console.log('Datos recibidos:', req.body);
     
     // Validar datos
     if (!req.body.sensor_id || req.body.temperatura === undefined) {
@@ -97,7 +97,7 @@ app.post('/api/sensores', (req, res) => {
 app.get('/api/status', (req, res) => {
     res.json({
         success: true,
-        message: '🚀 Servidor API funcionando correctamente',
+        message: 'Servidor API funcionando correctamente',
         timestamp: new Date().toISOString(),
         timestamp_ms: Date.now(),
         version: '1.0.0',
@@ -111,7 +111,7 @@ app.get('/api/status', (req, res) => {
 
 // Ruta de prueba para POST
 app.post('/api/test', (req, res) => {
-    console.log('🧪 Test POST recibido:', req.body);
+    console.log('Test POST recibido:', req.body);
     
     // Redondear valores de prueba
     const roundedBody = { ...req.body };
